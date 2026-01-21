@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philosophier Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Philosophier</p>
+          <h1>哲学者が悩みに応えるAI相談室</h1>
+          <p class="lead">
+            代表的な哲学者の視点で、あなたの悩みに違う角度から答えます。
+            哲学者を選び、相談内容を入力してプロトタイプを試してみてください。
+          </p>
+        </div>
+        <div class="hero-card">
+          <h2>今日のテーマ</h2>
+          <p>
+            「自分の進む道に迷ったとき、どんな基準で決断すればよいか？」
+          </p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="selection">
+          <h2>哲学者を選択</h2>
+          <div class="philosopher-grid" id="philosopherGrid"></div>
+        </section>
+
+        <section class="consultation">
+          <h2>相談内容</h2>
+          <form id="consultationForm">
+            <label class="field">
+              <span>あなたの悩み</span>
+              <textarea
+                id="userInput"
+                placeholder="例：仕事とプライベートのバランスに悩んでいます。"
+                required
+              ></textarea>
+            </label>
+            <button type="submit">哲学者に相談する</button>
+          </form>
+        </section>
+
+        <section class="response" aria-live="polite">
+          <h2>哲学者からの回答</h2>
+          <div class="response-card" id="responseCard">
+            <p class="response-placeholder">ここに回答が表示されます。</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>このプロトタイプは固定のテンプレート回答を使用しています。</p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
